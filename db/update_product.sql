@@ -1,1 +1,1 @@
-update products set description = $2 where product_id = $1;
+update products set name = $2, description = $3, price = $4, image_url = $5 where product_id = $1;

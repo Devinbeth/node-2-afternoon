@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 export default function Home() {
     return (
         <div>
-            <h1>Databases: Products Table</h1>
-            <Link to='/'> Home </Link>
-            <br/>
-            <Link to='/products'> Products </Link>
-            <br/>
-            <Link to='/update'> Updates </Link>
+            <h1>Database:</h1>
+            <Link to='/people'><h3> People Table </h3></Link>
+            <Link to='/products'><h3> Products Table </h3></Link>
+            <Link to='/purchases'><h3> Purchases Table </h3></Link>
         </div>
     );
 }

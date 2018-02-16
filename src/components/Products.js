@@ -12,7 +12,6 @@ export default class Products extends Component {
 
     componentDidMount() {
         axios.get('/api/products').then(res => {
-            console.log(res.data);
             this.setState({products: res.data});
         });
     }
@@ -21,20 +20,19 @@ export default class Products extends Component {
         let productList = this.state.products.map((e, i) => {
             return (
                 <div key={i}>
-                    <Link to='/'>
-                        {e.name}
-                    </Link>
+                        <p><Link to={`/product/${e.product_id}`}> Product ID: {e.product_id}</Link> | Name: {e.name} | Description: {e.description} | Price: {`$${e.price}`} | Image URL: {e.image_url}</p>
                 </div>
             );
         });
 
         return (
             <div>
-                <h1>Products</h1>
-                <Link to='/'> Home </Link>
+                <Link to='/'><h3> Home </h3></Link>
+                <h1>Products Table</h1>
                 <div>
                     {productList}
                 </div>
+                <Link to='/product/0'><h3> Add New Item </h3></Link>
             </div>
         );
     }
