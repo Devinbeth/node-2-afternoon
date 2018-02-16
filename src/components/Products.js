@@ -18,7 +18,7 @@ export default class Products extends Component {
     }
 
     render() {
-        let buttonList = this.state.products.map((e, i) => {
+        let productList = this.state.products.map((e, i) => {
             return (
                 <div key={i}>
                     <Link to='/'>
@@ -33,7 +33,7 @@ export default class Products extends Component {
                 <h1>Products</h1>
                 <Link to='/'> Home </Link>
                 <div>
-                    {buttonList}
+                    {productList}
                 </div>
             </div>
         );
