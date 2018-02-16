@@ -17,6 +17,7 @@ export default class Products extends Component {
     }
 
     render() {
+        this.state.products.sort((a, b) => a.product_id > b.product_id);
         let productList = this.state.products.map((e, i) => {
             return (
                 <div key={i}>

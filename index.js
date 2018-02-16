@@ -11,7 +11,7 @@ app.use(cors());
 
 const port = 3005;
 
-massive(process.env.CONNECTION_STRING).then(db => {
+massive(process.env.connection_string).then(db => {
     app.set('db', db);
     app.listen(port, () => console.log(`Server listening on port ${port}.`));
 });
